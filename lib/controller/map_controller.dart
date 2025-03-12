@@ -16,7 +16,7 @@ class MapController extends GetxController {
   final searchResults = <Marker>{}.obs;
   final isLocationLoading = true.obs;
 
-  final LatLng initialLocation = LatLng(23.8759, 90.3984);
+  final LatLng initialLocation = LatLng(23.82047286001036, 90.35784631244306);
 
   @override
   void onInit() {
@@ -27,14 +27,14 @@ class MapController extends GetxController {
   void onMapCreated(GoogleMapController controller) {
     mapController = controller;
     mapController.animateCamera(
-      CameraUpdate.newLatLngZoom(initialLocation, 15),
+      CameraUpdate.newLatLngZoom(initialLocation, 17),
     );
 
     markers.add(
       Marker(
-        markerId: MarkerId("uttara_14"),
+        markerId: MarkerId("Arifbad"),
         position: initialLocation,
-        infoWindow: InfoWindow(title: "Uttara 14"),
+        infoWindow: InfoWindow(title: "Arifbad"),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange),
       ),
     );
